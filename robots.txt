@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO before launch: replace with the real REVIT domain.
+Sitemap: https://revit-domain-pending.invalid/sitemap.xml
