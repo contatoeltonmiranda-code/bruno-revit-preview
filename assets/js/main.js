@@ -81,10 +81,10 @@ if (form) {
         return { text: `${n} ${n === 1 ? 'bedroom' : 'bedrooms'} + stairs & landing package`, price: +variantOf(item).dataset.price };
       }
       case 'sofa':
-        return { text: `Sofa — ${q} ${q === 1 ? 'seat' : 'seats'}`, price: q * +item.dataset.price };
+        return { text: `Sofa (${q} ${q === 1 ? 'seat' : 'seats'})`, price: q * +item.dataset.price };
       case 'mattress': {
         const v = variantOf(item);
-        return { text: `Mattress — ${v.value} x${q}`, price: q * +v.dataset.price };
+        return { text: `Mattress (${v.value}) x${q}`, price: q * +v.dataset.price };
       }
       default:
         if (item.hasAttribute('data-single')) return { text: label, price: +item.dataset.price };

@@ -1,10 +1,10 @@
-# REVIT — Carpet & Upholstery Cleaning (Dublin)
+# REVIT Carpet & Upholstery Cleaning (Dublin)
 
 > Mobile carpet, sofa, mattress and rug cleaning at your home in Dublin, Ireland. Run by Bruno Sergio. Professional equipment, a careful four-step process (assess, pre-treat, agitate, extract) and a 48-hour satisfaction guarantee. Quotes are free and requested on WhatsApp with photos of the item.
 
 ## Key page
 
-- [Carpet cleaning in Dublin — home page](/): services, real before/after photos, prices, quote builder, FAQ.
+- [Carpet cleaning in Dublin, home page](/): services, real before/after photos, prices, quote builder, FAQ.
 
 ## Services and starting prices (EUR)
 
@@ -12,11 +12,11 @@
 - Carpet, living room: from €50
 - Stairs & landing: from €45
 - 1 / 2 / 3 bedrooms + stairs & landing package: from €90 / €120 / €145
-- Sofa: €25 per seat
+- Sofa: from €25 per seat
 - Full sofa suite (3-seater sofa + 2 armchairs): from €125
-- Armchair / single upholstery piece: €20
-- Mattress: single €35, double €45, king €50
-- Rug (medium size): from €25
+- Armchair / single upholstery piece: from €20
+- Mattress: single from €35, double from €45, king from €50
+- Rug: from €25
 - Pet / odour treatment (add-on): from €20
 - Minimum call-out fee: €45
 
@@ -31,7 +31,7 @@ Final price is confirmed after a quick assessment, before any work begins. Speci
 
 ## Equipment and products
 
-Prochem Powermax extraction machine, Chemspec F90 and Enz-All pre-treatments, HydraMaster cleaning solutions.
+Professional extraction machine for deep carpet and upholstery cleaning, specialist pre-treatments matched to the type of soiling, and professional cleaning solutions that are safe for children, pets and everyone at home.
 
 ## Guarantee
 

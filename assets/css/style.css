@@ -228,27 +228,36 @@ p { margin: 0 0 var(--s3); text-wrap: pretty; }
 .includes li { padding: .7rem 0 .7rem 1.6rem; border-top: 1px solid #3f4247; position: relative; color: var(--on-dark-2); }
 .includes li::before { content: ""; position: absolute; left: 0; top: 1.25rem; width: 10px; height: 1.5px; background: var(--on-dark); }
 
-/* kit: spec sheet */
-.kit { padding-bottom: 0; }
-.kit__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 6rem); align-items: start; }
+/* kit: spec sheet (R4: brand strip removed; the unbranded kit hovers over the sheet's top rule) */
+.kit { padding-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.kit__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 6rem); align-items: center; }
 .spec { margin: 0; }
 .spec > div { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.5rem; padding: 1.35rem 0; border-top: 1px solid var(--line); }
 .spec > div:last-child { border-bottom: 1px solid var(--line); }
 .spec dt { font-size: 1.2rem; }
 .spec dd { margin: 0; color: var(--ink-2); }
 .spec dd::first-letter { text-transform: uppercase; }
-.brands { margin: clamp(3.5rem, 7vw, 6rem) 0 0; padding: 1.4rem var(--gutter); border-block: 1px solid var(--rule); display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .4rem 1.6rem; font-stretch: 125%; font-weight: 300; font-size: clamp(1.6rem, 1rem + 2.6vw, 3.4rem); letter-spacing: -.02em; color: #85878b; line-height: 1.1; }
-.brands span[aria-hidden] { color: var(--rule); }
 
-/* reviews */
-.reviews__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem) clamp(2rem, 4vw, 4rem); margin-top: var(--s5); }
-.review { margin: 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
-.review blockquote { margin: 0; }
-.review p { font-size: 1.12rem; line-height: 1.5; }
-.review figcaption { font-size: .9rem; font-weight: 600; color: var(--ink-2); }
-.review--lead { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 3fr); gap: 2rem; align-items: end; border-top-width: 2px; padding-top: 1.75rem; }
-.review--lead p { font-stretch: 108%; font-weight: 560; font-size: clamp(1.4rem, 1rem + 1.35vw, 2.15rem); line-height: 1.3; letter-spacing: -.015em; margin: 0; }
-.review--lead figcaption { text-align: right; padding-bottom: .4rem; }
+/* reviews (R4): one glass card per review; the first one leads, full width. Text verbatim from the client. */
+.reviews__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); margin-top: var(--s5); }
+.review { position: relative; margin: 0; display: flex; flex-direction: column; padding: clamp(1.5rem, 2.6vw, 2.25rem); }
+.review__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: clamp(1.1rem, 2vw, 1.5rem); }
+.review__mark { flex: none; width: clamp(2.6rem, 2.1rem + 1.2vw, 3.4rem); height: auto; aspect-ratio: 192 / 152; rotate: 180deg; color: rgba(230, 228, 222, .16); }   /* opening mark: Phosphor "quotes" turned */
+.review__stars { display: flex; gap: .2rem; margin: .15rem 0 0; color: var(--blue); }
+.review__stars svg { width: 1.05rem; height: 1.05rem; flex: none; }
+.review blockquote { margin: 0 0 1.5rem; flex: 1; }
+.review blockquote p { margin: 0; font-size: 1.1rem; line-height: 1.52; color: var(--ink); max-width: 58ch; }
+.review figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(236, 235, 231, .1); font-size: .9rem; font-weight: 600; }
+.review__who { color: var(--ink-2); }
+.review__job { display: inline-flex; align-items: center; gap: .55rem; color: var(--ink); }
+.review__ico { width: 1.35rem; height: 1.35rem; flex: none; color: var(--blue); }
+.review--lead { grid-column: 1 / -1; padding: clamp(1.75rem, 3.6vw, 3.25rem); }
+.review--lead .review__mark { width: clamp(3.4rem, 2.4rem + 2.6vw, 5.25rem); }
+.review--lead .review__head { margin-bottom: clamp(1.25rem, 2.6vw, 2rem); }
+.review--lead .review__stars svg { width: 1.25rem; height: 1.25rem; }
+.review--lead blockquote { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.review--lead blockquote p { max-width: 34em; font-stretch: 108%; font-weight: 560; font-size: clamp(1.32rem, 1rem + 1.25vw, 2.05rem); line-height: 1.32; letter-spacing: -.015em; }
+.deco__light--reviews { left: 8%; right: auto; top: 22%; width: 84%; height: 78%; }
 
 /* bruno */
 /* bruno: full-bleed photo anchored left, dissolving right-to-left into the ground (R1) */
@@ -406,7 +415,7 @@ section.quote { background: var(--sheet); }
 .section > .wrap { position: relative; }
 
 /* glass: trust bar, pain/verdict sheets, price docket, quote carbon */
-.trust, .sheet, .docket, .carbon {
+.trust, .sheet, .docket, .carbon, .review {
   --glass-tint: rgba(24, 25, 27, .64);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, .065) 0, rgba(255, 255, 255, .016) 24%, rgba(255, 255, 255, 0) 50%),
@@ -417,7 +426,7 @@ section.quote { background: var(--sheet); }
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .09), 0 30px 60px -32px rgba(0, 0, 0, .85);
 }
 .trust { --glass-tint: rgba(19, 20, 22, .58); border-radius: 16px; }
-.trust::after, .sheet::after, .docket::after, .carbon::after {
+.trust::after, .sheet::after, .docket::after, .carbon::after, .review::after {
   content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
   background: linear-gradient(162deg, rgba(255, 255, 255, .30), rgba(255, 255, 255, .08) 28%, rgba(255, 255, 255, .035) 62%, rgba(255, 255, 255, .13));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -425,10 +434,10 @@ section.quote { background: var(--sheet); }
           mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
 }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .trust, .sheet, .docket, .carbon { --glass-tint: rgba(27, 28, 30, .95); }
+  .trust, .sheet, .docket, .carbon, .review { --glass-tint: rgba(27, 28, 30, .95); }
 }
 @media (prefers-reduced-transparency: reduce) {
-  .trust, .sheet, .docket, .carbon { --glass-tint: rgba(27, 28, 30, .95); }
+  .trust, .sheet, .docket, .carbon, .review { --glass-tint: rgba(27, 28, 30, .95); }
 }
 
 /* fade divider: 1px rule that dies out at both sides */
@@ -486,6 +495,9 @@ section.quote { background: var(--sheet); }
 .float-obj--quote { --rot: -2deg; --sh-x: 6%; --sh-y: -10%; --tone: brightness(1.12) contrast(1.04); right: calc(-.25 * var(--gutter)); top: calc(-1 * clamp(4.5rem, 9vw, 8.5rem) - 3.25rem); width: clamp(320px, 33vw, 500px); }
 /* faq: rolled rug under the heading */
 .float-obj--faq { --rot: 2deg; --sh-x: 8%; --sh-y: -9%; left: -1.5rem; top: 9rem; width: clamp(290px, 27vw, 420px); }
+/* kit (R4): unbranded extractor + bottles hovering over the spec sheet's top rule, right-aligned to the dd column */
+.kit__sheet { position: relative; }
+.float-obj--kit { --rot: -1deg; --sh-x: 9%; --sh-y: -7%; --sh-h: 13%; position: relative; width: min(66%, 440px); margin: 0 3% clamp(2rem, 3.5vw, 3rem) auto; }
 
 /* poster mode (used to render the static poster from the live scene) */
 .is-poster .masthead, .is-poster .stage__panels, .is-poster .float-wa, .is-poster .stage__poster { visibility: hidden; }
@@ -547,8 +559,8 @@ section.quote { background: var(--sheet); }
   .process__foot { grid-template-columns: 1fr; margin-top: 2.5rem; }
   .spec > div { grid-template-columns: 1fr; gap: .35rem; }
   .reviews__grid { grid-template-columns: 1fr; }
-  .review--lead { grid-template-columns: 1fr; gap: 1rem; }
-  .review--lead figcaption { text-align: left; }
+  .review--lead blockquote p { font-size: 1.22rem; }
+  .review blockquote p { font-size: 1.04rem; }
   .bruno__grid { grid-template-columns: 1fr; }
   .builder__fields { grid-template-columns: 1fr; }
   .pair__grid { grid-template-columns: 1fr; }
@@ -600,10 +612,11 @@ section.quote { background: var(--sheet); }
   .trust li:nth-child(odd)::before { display: none; }
   .trust li::after { content: none; }
   .trust li:nth-child(n+3)::after { content: ""; position: absolute; left: 8%; right: 8%; top: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(236, 235, 231, .14), transparent); }
-  .trust, .sheet, .docket, .carbon { -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); border-radius: 12px; }
+  .trust, .sheet, .docket, .carbon, .review { -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); border-radius: 12px; }
   .float-obj { --drift: 1rem; }
   .float-obj--prices { right: -5vw; bottom: -2.25rem; width: 46vw; }
   .float-obj--faq { right: -5vw; top: -2rem; width: 50vw; }
+  .float-obj--kit { width: 82%; margin: .5rem auto 2.25rem; }
   .float-obj--process { right: -4vw; top: calc(-1 * clamp(4.5rem, 9vw, 8.5rem) - 1.5rem); width: 58vw; }
   .bigword--clean { font-size: 30vw; }
   .bigword--dublin { font-size: 27vw; }

@@ -59,13 +59,13 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpet cleaning, standard bedroom" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 35, "priceCurrency": "EUR" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carpet cleaning, living room" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 50, "priceCurrency": "EUR" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stairs and landing cleaning" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 45, "priceCurrency": "EUR" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sofa cleaning, per seat" }, "price": 25, "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sofa cleaning, per seat" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 25, "priceCurrency": "EUR" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full sofa suite cleaning (3-seater sofa + 2 armchairs)" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 125, "priceCurrency": "EUR" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Armchair / single upholstery piece cleaning" }, "price": 20, "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Single mattress cleaning" }, "price": 35, "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Double mattress cleaning" }, "price": 45, "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "King mattress cleaning" }, "price": 50, "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rug cleaning (medium size)" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 25, "priceCurrency": "EUR" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Armchair / single upholstery piece cleaning" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 20, "priceCurrency": "EUR" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Single mattress cleaning" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 35, "priceCurrency": "EUR" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Double mattress cleaning" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 45, "priceCurrency": "EUR" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "King mattress cleaning" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 50, "priceCurrency": "EUR" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rug cleaning" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 25, "priceCurrency": "EUR" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pet / odour treatment (add-on)" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 20, "priceCurrency": "EUR" } }
         ]
       }
@@ -75,7 +75,7 @@
       "mainEntity": [
         { "@type": "Question", "name": "How long will it take to dry?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the material, how much cleaning the item needed and how well the room is ventilated. We'll give you an estimate for your job and aftercare advice before we leave." } },
         { "@type": "Question", "name": "Can you remove old stains?", "acceptedAnswer": { "@type": "Answer", "text": "Many stains improve a lot with the right treatment, but old or set-in stains need to be assessed first. Some will lighten rather than disappear completely. Send us a photo and we'll tell you honestly what to expect." } },
-        { "@type": "Question", "name": "Can you deal with pet hair and odours?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We treat pet hair and odours as part of the clean, and for stronger smells there's a pet and odour treatment add-on from €20. Strong odours are assessed first, as results vary with the cause and how long it has been there." } },
+        { "@type": "Question", "name": "Can you deal with pet stains and odours?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We treat pet stains and odours as part of the clean, and for stronger cases there's a pet and odour treatment add-on from €20. Strong odours and older stains are assessed first, as results vary with the cause and how long they have been there." } },
         { "@type": "Question", "name": "Which areas do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "We're a mobile service and come to your home in Dublin." } },
         { "@type": "Question", "name": "Is there a minimum charge?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, there's a minimum call-out fee of €45." } },
         { "@type": "Question", "name": "Why is the final price confirmed after the assessment?", "acceptedAnswer": { "@type": "Answer", "text": "Every item is different. Size, fabric and condition change how much work is needed, so we confirm the price once we've seen the job, and always before any work begins." } },
@@ -126,9 +126,7 @@
         <h1 class="hero__title">Carpet Cleaning in Dublin That Revives What You Already Own</h1>
         <p class="hero__sub">Mobile carpet, sofa, mattress and rug cleaning at your home in Dublin. Professional equipment, a careful four-step process and a 48-hour satisfaction guarantee.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" data-wa href="https://wa.me/?text=Hi%20Bruno%2C%20I'd%20like%20a%20quote%20from%20REVIT.%20I'll%20send%20some%20photos%20of%20what%20needs%20cleaning." target="_blank" rel="noopener">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Get a Free Quote on WhatsApp
-          </a>
+          <a class="btn btn--primary" href="#quote">Build Your Quote</a>
           <a class="btn btn--ghost" href="#prices">See Prices</a>
         </div>
         <p class="hero__micro">Send us a few photos and we'll reply with a no-obligation quote.</p>
@@ -140,7 +138,7 @@
       <li><svg class="trust__ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M252.55 108.09L207 55a14 14 0 0 0-10.74-5H32a14 14 0 0 0-14 14v112a14 14 0 0 0 14 14h18.6a30 30 0 0 0 58.8 0h53.2a30 30 0 0 0 58.8 0H240a14 14 0 0 0 14-14v-64a6 6 0 0 0-1.45-3.91m-54.7-45.32L234.94 106H174V62h22.26a2 2 0 0 1 1.59.77M102 106V62h60v44ZM32 62h58v44H30V64a2 2 0 0 1 2-2m48 140a18 18 0 1 1 18-18a18 18 0 0 1-18 18m112 0a18 18 0 1 1 18-18a18 18 0 0 1-18 18m48-24h-18.6a30 30 0 0 0-58.8 0h-53.2a30 30 0 0 0-58.8 0H32a2 2 0 0 1-2-2v-58h212v58a2 2 0 0 1-2 2"/></svg><span>Mobile service in Dublin</span></li>
       <li><svg class="trust__ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M166 112a6 6 0 0 1-6 6H96a6 6 0 0 1 0-12h64a6 6 0 0 1 6 6m-6 26H96a6 6 0 0 0 0 12h64a6 6 0 0 0 0-12m70-10a102 102 0 0 1-150.69 89.65l-34.87 11.62a14 14 0 0 1-17.71-17.71l11.62-34.87A102 102 0 1 1 230 128m-12 0a90 90 0 1 0-167.92 45.06a6 6 0 0 1 .5 4.91l-12.46 37.38a2 2 0 0 0 2.53 2.53L78 205.42a6.2 6.2 0 0 1 1.9-.31a6.1 6.1 0 0 1 3 .81A90 90 0 0 0 218 128"/></svg><span>Free, no-obligation quotes</span></li>
       <li><svg class="trust__ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M208 42H48a14 14 0 0 0-14 14v56c0 51.94 25.12 83.4 46.2 100.64c22.73 18.6 45.27 24.89 46.22 25.15a6 6 0 0 0 3.16 0c.95-.26 23.49-6.55 46.22-25.15C196.88 195.4 222 163.94 222 112V56a14 14 0 0 0-14-14m2 70c0 37.76-13.94 68.39-41.44 91.06A131.2 131.2 0 0 1 128 225.72a131 131 0 0 1-40.56-22.66C59.94 180.39 46 149.76 46 112V56a2 2 0 0 1 2-2h160a2 2 0 0 1 2 2Zm-37.76-12.24a6 6 0 0 1 0 8.48l-56 56a6 6 0 0 1-8.48 0l-24-24a6 6 0 0 1 8.48-8.48L112 151.51l51.76-51.75a6 6 0 0 1 8.48 0"/></svg><span>48-hour satisfaction guarantee</span></li>
-      <li><svg class="trust__ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M200 78a6 6 0 0 0 6-6a54.06 54.06 0 0 0-54-54H80a14 14 0 0 0-14 14v48a26 26 0 0 1-26 26a6 6 0 0 0 0 12a38 38 0 0 0 38-38v-2h36v26.62a25.87 25.87 0 0 1-9.76 20.3l-16 12.79A37.81 37.81 0 0 0 74 167.38V224a14 14 0 0 0 14 14h104a14 14 0 0 0 14-14v-12.53A268.9 268.9 0 0 0 170.57 78ZM78 32a2 2 0 0 1 2-2h72a42.06 42.06 0 0 1 41.57 36H78Zm116 179.47V224a2 2 0 0 1-2 2H88a2 2 0 0 1-2-2v-56.62a25.87 25.87 0 0 1 9.76-20.3l16-12.79A37.81 37.81 0 0 0 126 104.62V78h30.64A256.84 256.84 0 0 1 194 211.47"/></svg><span>Prochem, Chemspec &amp; HydraMaster equipment and products</span></li>
+      <li><svg class="trust__ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M200 78a6 6 0 0 0 6-6a54.06 54.06 0 0 0-54-54H80a14 14 0 0 0-14 14v48a26 26 0 0 1-26 26a6 6 0 0 0 0 12a38 38 0 0 0 38-38v-2h36v26.62a25.87 25.87 0 0 1-9.76 20.3l-16 12.79A37.81 37.81 0 0 0 74 167.38V224a14 14 0 0 0 14 14h104a14 14 0 0 0 14-14v-12.53A268.9 268.9 0 0 0 170.57 78ZM78 32a2 2 0 0 1 2-2h72a42.06 42.06 0 0 1 41.57 36H78Zm116 179.47V224a2 2 0 0 1-2 2H88a2 2 0 0 1-2-2v-56.62a25.87 25.87 0 0 1 9.76-20.3l16-12.79A37.81 37.81 0 0 0 126 104.62V78h30.64A256.84 256.84 0 0 1 194 211.47"/></svg><span>Professional kit, safe for children and pets</span></li>
       <li><svg class="trust__ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M238 200a6 6 0 0 1-6 6h-18v18a6 6 0 0 1-12 0v-18h-18a6 6 0 0 1 0-12h18v-18a6 6 0 0 1 12 0v18h18a6 6 0 0 1 6 6m-17-77.18l-93 54.23l-93-54.23a6 6 0 0 0-6 10.36l96 56a6 6 0 0 0 6 0l96-56a6 6 0 0 0-6-10.36M26 80a6 6 0 0 1 3-5.18l96-56a6 6 0 0 1 6 0l96 56a6 6 0 0 1 0 10.36l-96 56a6 6 0 0 1-6 0l-96-56A6 6 0 0 1 26 80m17.91 0L128 129.05L212.09 80L128 31ZM141 217.48l-13 7.57l-93-54.23a6 6 0 0 0-6 10.36l96 56a6 6 0 0 0 6 0l16-9.33a6 6 0 0 0-6-10.37"/></svg><span>Special rates for 2+ services on the same visit</span></li>
     </ul>
 
@@ -194,20 +192,20 @@
       <li class="swatch">
         <h3 class="swatch__name">Sofas &amp; Upholstery</h3>
         <p class="swatch__line">Sofas, armchairs and sofa suites. We tackle body oils, spills and everyday grime.</p>
-        <ul class="swatch__price"><li>€25 per seat</li><li>Armchair €20</li><li>Full sofa suite from €125</li></ul>
+        <ul class="swatch__price"><li>From €25 per seat</li><li>Armchair from €20</li><li>Full sofa suite from €125</li></ul>
       </li>
       <li class="swatch">
         <h3 class="swatch__name">Mattresses</h3>
         <p class="swatch__line">A deep clean for a fresher, more hygienic bed.</p>
-        <ul class="swatch__price"><li>Single €35</li><li>Double €45</li><li>King €50</li></ul>
+        <ul class="swatch__price"><li>Single from €35</li><li>Double from €45</li><li>King from €50</li></ul>
       </li>
       <li class="swatch">
         <h3 class="swatch__name">Rugs</h3>
         <p class="swatch__line">Bring back the colour and softness of your favourite rug.</p>
-        <ul class="swatch__price"><li>Medium rug from €25</li></ul>
+        <ul class="swatch__price"><li>From €25</li></ul>
       </li>
       <li class="swatch swatch--addon">
-        <h3 class="swatch__name">Add-on — Pet &amp; Odour Treatment</h3>
+        <h3 class="swatch__name">Pet &amp; Odour Treatment (Add-on)</h3>
         <p class="swatch__line">Added to any service when pets or lingering smells are part of the problem.</p>
         <ul class="swatch__price"><li>From €20</li></ul>
       </li>
@@ -260,9 +258,7 @@
     </div>
     <div class="results__foot">
       <p class="note">Results depend on the fabric, the type of stain and how long it has been there. We'll always tell you what to expect before we start.</p>
-      <a class="btn btn--primary" data-wa href="https://wa.me/?text=Hi%20Bruno%2C%20I'd%20like%20a%20quote%20from%20REVIT.%20I'll%20send%20some%20photos%20of%20what%20needs%20cleaning." target="_blank" rel="noopener">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Get a Quote for Your Item
-      </a>
+      <a class="btn btn--primary" href="#quote">Build Your Quote</a>
     </div>
   </div>
 </section>
@@ -302,33 +298,39 @@
   <div class="wrap kit__grid">
     <div>
       <h2 class="h2" id="kit-h">Professional Kit. Specialist Products.</h2>
-      <p class="lede">We use equipment and products from established industry brands, so each fabric and stain gets the right treatment, not one bottle for everything.</p>
+      <p class="lede">We work with professional equipment and specialist products that are safe for children, pets and everyone at home. Each fabric and stain gets the right treatment, not one bottle for everything.</p>
     </div>
-    <dl class="spec">
-      <div><dt>Prochem Powermax</dt><dd>professional extraction machine for deep carpet and upholstery cleaning</dd></div>
-      <div><dt>Chemspec F90 &amp; Enz-All</dt><dd>specialist pre-treatments matched to the type of soiling</dd></div>
-      <div><dt>HydraMaster</dt><dd>professional cleaning solutions</dd></div>
-    </dl>
+    <div class="kit__sheet">
+      <span class="float-obj float-obj--kit" aria-hidden="true"><img src="assets/img/obj-kit.webp" width="1380" height="1033" alt="" loading="lazy" decoding="async"></span>
+      <dl class="spec">
+        <div><dt>Extraction machine</dt><dd>professional equipment for deep carpet and upholstery cleaning</dd></div>
+        <div><dt>Pre-treatments</dt><dd>specialist products matched to the type of soiling</dd></div>
+        <div><dt>Cleaning solutions</dt><dd>professional products, safe for the whole family, pets included</dd></div>
+      </dl>
+    </div>
   </div>
-  <p class="brands" aria-label="Brands we use"><span>Prochem</span><span aria-hidden="true">·</span><span>Chemspec</span><span aria-hidden="true">·</span><span>HydraMaster</span></p>
 </section>
 
 <!-- ===== Reviews ===== -->
 <section class="section reviews" id="reviews" aria-labelledby="reviews-h">
+  <div class="deco" aria-hidden="true"><span class="deco__light deco__light--reviews"></span></div>
   <div class="wrap">
     <h2 class="h2" id="reviews-h">What Our Customers Say</h2>
     <div class="reviews__grid">
       <figure class="review review--lead">
-        <blockquote><p>"So happy with the results! My couch was looking pretty rough with a few nasty stains, but Bruno from REVIT made it look way better than I ever expected. Proper professional service and a really lovely guy to deal with. Highly recommend!"</p></blockquote>
-        <figcaption>REVIT customer · Sofa cleaning</figcaption>
+        <div class="review__head"><svg class="review__mark" viewBox="0 0 192 152" aria-hidden="true" focusable="false"><use href="#i-quote"/></svg><p class="review__stars" role="img" aria-label="5 stars"><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></p></div>
+        <blockquote><p>So happy with the results! My couch was looking pretty rough with a few nasty stains, but Bruno from REVIT made it look way better than I ever expected. Proper professional service and a really lovely guy to deal with. Highly recommend!</p></blockquote>
+        <figcaption><span class="review__who">REVIT customer</span><span class="review__job"><svg class="review__ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M238 107.37V72a14 14 0 0 0-14-14H32a14 14 0 0 0-14 14v35.37A14 14 0 0 0 10 120v48a14 14 0 0 0 14 14h10v18a6 6 0 0 0 12 0v-18h164v18a6 6 0 0 0 12 0v-18h10a14 14 0 0 0 14-14v-48a14 14 0 0 0-8-12.63M226 72v34h-10a14 14 0 0 0-14 14v18h-68V70h90a2 2 0 0 1 2 2M32 70h90v68H54v-18a14 14 0 0 0-14-14H30V72a2 2 0 0 1 2-2m202 98a2 2 0 0 1-2 2H24a2 2 0 0 1-2-2v-48a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v24a6 6 0 0 0 6 6h160a6 6 0 0 0 6-6v-24a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2Z"/></svg>Sofa cleaning</span></figcaption>
       </figure>
       <figure class="review">
-        <blockquote><p>"Can't fault the service at all. Booking was a breeze, Bruno arrived right on time and took real care while doing the carpets. You can visibly see and smell how much fresher they are. Standard of work is top-tier. Will absolutely use REVIT again!"</p></blockquote>
-        <figcaption>REVIT customer · Carpet cleaning</figcaption>
+        <div class="review__head"><svg class="review__mark" viewBox="0 0 192 152" aria-hidden="true" focusable="false"><use href="#i-quote"/></svg><p class="review__stars" role="img" aria-label="5 stars"><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></p></div>
+        <blockquote><p>Can't fault the service at all. Booking was a breeze, Bruno arrived right on time and took real care while doing the carpets. You can visibly see and smell how much fresher they are. Standard of work is top-tier. Will absolutely use REVIT again!</p></blockquote>
+        <figcaption><span class="review__who">REVIT customer</span><span class="review__job"><svg class="review__ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M200 18a6 6 0 0 0-6 6v18h-36V24a6 6 0 0 0-12 0v18h-36V24a6 6 0 0 0-12 0v18H62V24a6 6 0 0 0-12 0v208a6 6 0 0 0 12 0v-18h36v18a6 6 0 0 0 12 0v-18h36v18a6 6 0 0 0 12 0v-18h36v18a6 6 0 0 0 12 0V24a6 6 0 0 0-6-6M62 54h132v148H62Zm66 120a6 6 0 0 0 5.14-2.91l24-40a6 6 0 0 0 0-6.18l-24-40a6 6 0 0 0-10.28 0l-24 40a6 6 0 0 0 0 6.18l24 40A6 6 0 0 0 128 174m0-74.34L145 128l-17 28.34L111 128Z"/></svg>Carpet cleaning</span></figcaption>
       </figure>
       <figure class="review">
-        <blockquote><p>"Had Bruno from REVIT out to clean our mattress and I'm honestly shocked at how much better it looks and feels. Super professional, quick turnaround, and total peace of mind knowing it's properly clean. 10/10 would recommend."</p></blockquote>
-        <figcaption>REVIT customer · Mattress cleaning</figcaption>
+        <div class="review__head"><svg class="review__mark" viewBox="0 0 192 152" aria-hidden="true" focusable="false"><use href="#i-quote"/></svg><p class="review__stars" role="img" aria-label="5 stars"><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></p></div>
+        <blockquote><p>Had Bruno from REVIT out to clean our mattress and I'm honestly shocked at how much better it looks and feels. Super professional, quick turnaround, and total peace of mind knowing it's properly clean. 10/10 would recommend.</p></blockquote>
+        <figcaption><span class="review__who">REVIT customer</span><span class="review__job"><svg class="review__ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M216 74H30V48a6 6 0 0 0-12 0v160a6 6 0 0 0 12 0v-34h212v34a6 6 0 0 0 12 0v-96a38 38 0 0 0-38-38M30 86h76v76H30Zm88 76V86h98a26 26 0 0 1 26 26v50Z"/></svg>Mattress cleaning</span></figcaption>
       </figure>
     </div>
   </div>
@@ -345,10 +347,8 @@
       <p>Hi, I'm Bruno. I started REVIT because I believe most carpets, sofas and mattresses don't need replacing. They need a proper clean.</p>
       <p>On every job, I check the fabric first, explain what can realistically be treated and look after your home as if it were my own. No surprises, no pressure.</p>
       <div class="bruno__actions">
-        <a class="btn btn--primary" data-wa href="https://wa.me/?text=Hi%20Bruno%2C%20I'd%20like%20a%20quote%20from%20REVIT.%20I'll%20send%20some%20photos%20of%20what%20needs%20cleaning." target="_blank" rel="noopener">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Message Bruno on WhatsApp
-        </a>
-        <a class="link-arrow" href="https://www.instagram.com/brunow.ms/" target="_blank" rel="noopener">See more results on Instagram — @brunow.ms<svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--primary" href="#quote">Build Your Quote</a>
+        <a class="link-arrow" href="https://www.instagram.com/brunow.ms/" target="_blank" rel="noopener">See more results on Instagram (@brunow.ms)<svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
@@ -372,19 +372,19 @@
         <caption class="sr-only">REVIT price list</caption>
         <thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Carpet — standard bedroom</th><td><small>from</small> €35</td></tr>
-          <tr><th scope="row">Carpet — living room</th><td><small>from</small> €50</td></tr>
+          <tr><th scope="row">Carpet (standard bedroom)</th><td><small>from</small> €35</td></tr>
+          <tr><th scope="row">Carpet (living room)</th><td><small>from</small> €50</td></tr>
           <tr><th scope="row">Stairs &amp; landing</th><td><small>from</small> €45</td></tr>
           <tr><th scope="row">1 bedroom + stairs &amp; landing package</th><td><small>from</small> €90</td></tr>
           <tr><th scope="row">2 bedrooms + stairs &amp; landing package</th><td><small>from</small> €120</td></tr>
           <tr><th scope="row">3 bedrooms + stairs &amp; landing package</th><td><small>from</small> €145</td></tr>
-          <tr><th scope="row">Sofa — per seat</th><td>€25</td></tr>
+          <tr><th scope="row">Sofa (per seat)</th><td><small>from</small> €25</td></tr>
           <tr><th scope="row">Full sofa suite (3-seater sofa + 2 armchairs)</th><td><small>from</small> €125</td></tr>
-          <tr><th scope="row">Armchair / single upholstery piece</th><td>€20</td></tr>
-          <tr><th scope="row">Single mattress</th><td>€35</td></tr>
-          <tr><th scope="row">Double mattress</th><td>€45</td></tr>
-          <tr><th scope="row">King mattress</th><td>€50</td></tr>
-          <tr><th scope="row">Rug (medium size)</th><td><small>from</small> €25</td></tr>
+          <tr><th scope="row">Armchair / single upholstery piece</th><td><small>from</small> €20</td></tr>
+          <tr><th scope="row">Single mattress</th><td><small>from</small> €35</td></tr>
+          <tr><th scope="row">Double mattress</th><td><small>from</small> €45</td></tr>
+          <tr><th scope="row">King mattress</th><td><small>from</small> €50</td></tr>
+          <tr><th scope="row">Rug</th><td><small>from</small> €25</td></tr>
           <tr><th scope="row">Pet / odour treatment (add-on)</th><td><small>from</small> €20</td></tr>
         </tbody>
         <tfoot><tr><th scope="row">Minimum call-out fee</th><td>€45</td></tr></tfoot>
@@ -410,13 +410,13 @@
     <form class="builder" data-builder novalidate>
       <fieldset class="builder__items">
         <legend class="sr-only">Services</legend>
-        <div class="item" data-item="carpet-bed" data-price="35" data-label="Carpet — bedroom">
-          <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Carpet — bedroom</span></label>
+        <div class="item" data-item="carpet-bed" data-price="35" data-label="Carpet (bedroom)">
+          <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Carpet (bedroom)</span></label>
           <span class="item__from">from €35</span>
           <div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Fewer bedrooms">−</button><input class="qty__val" type="number" inputmode="numeric" min="1" max="10" value="1" aria-label="Number of bedrooms"><button type="button" class="qty__btn" data-step="1" aria-label="More bedrooms">+</button></div>
         </div>
-        <div class="item" data-item="carpet-living" data-price="50" data-label="Carpet — living room">
-          <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Carpet — living room</span></label>
+        <div class="item" data-item="carpet-living" data-price="50" data-label="Carpet (living room)">
+          <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Carpet (living room)</span></label>
           <span class="item__from">from €50</span>
           <div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Fewer living rooms">−</button><input class="qty__val" type="number" inputmode="numeric" min="1" max="10" value="1" aria-label="Number of living rooms"><button type="button" class="qty__btn" data-step="1" aria-label="More living rooms">+</button></div>
         </div>
@@ -436,7 +436,7 @@
         </div>
         <div class="item" data-item="sofa" data-price="25" data-label="Sofa" data-unit="seats">
           <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Sofa (number of seats)</span></label>
-          <span class="item__from">€25 per seat</span>
+          <span class="item__from">from €25 per seat</span>
           <div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Fewer seats">−</button><input class="qty__val" type="number" inputmode="numeric" min="1" max="12" value="3" aria-label="Number of sofa seats"><button type="button" class="qty__btn" data-step="1" aria-label="More seats">+</button></div>
         </div>
         <div class="item" data-item="suite" data-price="125" data-label="Full sofa suite (3-seater + 2 armchairs)">
@@ -446,7 +446,7 @@
         </div>
         <div class="item" data-item="armchair" data-price="20" data-label="Armchair / single upholstery piece">
           <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Armchair / single upholstery piece</span></label>
-          <span class="item__from">€20</span>
+          <span class="item__from">from €20</span>
           <div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Fewer armchairs">−</button><input class="qty__val" type="number" inputmode="numeric" min="1" max="10" value="1" aria-label="Number of armchairs or single pieces"><button type="button" class="qty__btn" data-step="1" aria-label="More armchairs">+</button></div>
         </div>
         <div class="item" data-item="mattress" data-label="Mattress" data-variant data-qty>
@@ -459,8 +459,8 @@
           </div>
           <div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Fewer mattresses">−</button><input class="qty__val" type="number" inputmode="numeric" min="1" max="10" value="1" aria-label="Number of mattresses"><button type="button" class="qty__btn" data-step="1" aria-label="More mattresses">+</button></div>
         </div>
-        <div class="item" data-item="rug" data-price="25" data-label="Rug (medium)">
-          <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Rug (medium)</span></label>
+        <div class="item" data-item="rug" data-price="25" data-label="Rug">
+          <label class="item__check"><input type="checkbox"><span class="item__box" aria-hidden="true"></span><span class="item__name">Rug</span></label>
           <span class="item__from">from €25</span>
           <div class="qty"><button type="button" class="qty__btn" data-step="-1" aria-label="Fewer rugs">−</button><input class="qty__val" type="number" inputmode="numeric" min="1" max="10" value="1" aria-label="Number of rugs"><button type="button" class="qty__btn" data-step="1" aria-label="More rugs">+</button></div>
         </div>
@@ -500,9 +500,7 @@
     <div class="pair__multi" id="multi">
       <h2 class="h2">Cleaning More Than One Item?</h2>
       <p>Make the most of a single visit. Book two or more services on the same day and ask about our special multi-service rates, with the same professional standard on every item.</p>
-      <a class="btn btn--primary" data-wa href="https://wa.me/?text=Hi%20Bruno%2C%20I'd%20like%20a%20quote%20from%20REVIT.%20I'll%20send%20some%20photos%20of%20what%20needs%20cleaning." target="_blank" rel="noopener">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Ask About Multi-Service Rates
-      </a>
+      <a class="btn btn--primary" href="#quote">Build Your Quote</a>
     </div>
     <div class="pair__guarantee" id="guarantee">
       <h2 class="h2">48-Hour Satisfaction Guarantee</h2>
@@ -523,9 +521,7 @@
       <li><span class="route__n" aria-hidden="true">3</span><h3>Pick a time</h3><p>Once you approve the quote, we agree a date and time that suits you.</p></li>
       <li><span class="route__n" aria-hidden="true">4</span><h3>We come to you</h3><p>We clean at your home and leave you with aftercare tips.</p></li>
     </ol>
-    <a class="btn btn--primary" data-wa href="https://wa.me/?text=Hi%20Bruno%2C%20I'd%20like%20a%20quote%20from%20REVIT.%20I'll%20send%20some%20photos%20of%20what%20needs%20cleaning." target="_blank" rel="noopener">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Start on WhatsApp
-    </a>
+    <a class="btn btn--primary" href="#quote">Build Your Quote</a>
   </div>
 </section>
 
@@ -538,7 +534,7 @@
     <div class="faq__list">
       <details><summary>How long will it take to dry?</summary><p>It depends on the material, how much cleaning the item needed and how well the room is ventilated. We'll give you an estimate for your job and aftercare advice before we leave.</p></details>
       <details><summary>Can you remove old stains?</summary><p>Many stains improve a lot with the right treatment, but old or set-in stains need to be assessed first. Some will lighten rather than disappear completely. Send us a photo and we'll tell you honestly what to expect.</p></details>
-      <details><summary>Can you deal with pet hair and odours?</summary><p>Yes. We treat pet hair and odours as part of the clean, and for stronger smells there's a pet and odour treatment add-on from €20. Strong odours are assessed first, as results vary with the cause and how long it has been there.</p></details>
+      <details><summary>Can you deal with pet stains and odours?</summary><p>Yes. We treat pet stains and odours as part of the clean, and for stronger cases there's a pet and odour treatment add-on from €20. Strong odours and older stains are assessed first, as results vary with the cause and how long they have been there.</p></details>
       <details><summary>Which areas do you cover?</summary><p>We're a mobile service and come to your home in Dublin.</p></details>
       <details><summary>Is there a minimum charge?</summary><p>Yes, there's a minimum call-out fee of €45.</p></details>
       <details><summary>Why is the final price confirmed after the assessment?</summary><p>Every item is different. Size, fabric and condition change how much work is needed, so we confirm the price once we've seen the job, and always before any work begins.</p></details>
@@ -555,9 +551,7 @@
     <div class="final__copy">
     <h2 class="final__title" id="final-h">Send a Photo. Get a Clear Quote.</h2>
     <p>Tell us what needs cleaning, send a few photos and we'll come back with a free, no-obligation quote. Mobile service in Dublin, backed by our 48-hour satisfaction guarantee.</p>
-    <a class="btn btn--primary btn--lg" data-wa href="https://wa.me/?text=Hi%20Bruno%2C%20I'd%20like%20a%20quote%20from%20REVIT.%20I'll%20send%20some%20photos%20of%20what%20needs%20cleaning." target="_blank" rel="noopener">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Get My Free Quote on WhatsApp
-    </a>
+    <a class="btn btn--primary btn--lg" href="#quote">Build Your Quote</a>
     <p class="final__trust">Free quotes · 48-hour satisfaction guarantee · Special rates for 2+ services</p>
     </div>
     <figure class="final__art"><img src="assets/img/sofa-revived-dark.webp" width="1330" height="832" loading="lazy" decoding="async" alt="3D studio render of a clean sofa, the result REVIT aims for with upholstery and carpet cleaning in Dublin"></figure>
@@ -569,7 +563,7 @@
   <div class="wrap footer__grid">
     <div class="footer__brand">
       <img src="assets/img/revit-lockup-paper.webp" width="975" height="223" alt="REVIT Carpet &amp; Upholstery Cleaning" loading="lazy">
-      <p><strong>REVIT — Carpet &amp; Upholstery Cleaning</strong><br>Mobile carpet, sofa, mattress and rug cleaning in Dublin.</p>
+      <p><strong>REVIT Carpet &amp; Upholstery Cleaning</strong><br>Mobile carpet, sofa, mattress and rug cleaning in Dublin.</p>
     </div>
     <ul class="footer__contact">
       <li><a data-wa href="https://wa.me/?text=Hi%20Bruno%2C%20I'd%20like%20a%20quote%20from%20REVIT.%20I'll%20send%20some%20photos%20of%20what%20needs%20cleaning." target="_blank" rel="noopener">WhatsApp</a></li>
@@ -591,6 +585,8 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.17 8.17 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23a7.48 7.48 0 0 1-1.38-1.72c-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.6.19 1.14.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
   <symbol id="i-drop" viewBox="0 0 100 140"><path fill="none" stroke="currentColor" vector-effect="non-scaling-stroke" d="M50 3C40 24 9 58 9 92a41 41 0 0 0 82 0C91 58 60 24 50 3Z"/><path fill="none" stroke="currentColor" vector-effect="non-scaling-stroke" d="M50 27C43 42 21 68 21 92a29 29 0 0 0 58 0C79 68 57 42 50 27Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 256 256"><path fill="currentColor" d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z"/></symbol>
+  <symbol id="i-quote" viewBox="24 56 192 152"><path fill="currentColor" d="M116 72v88a48.05 48.05 0 0 1-48 48a8 8 0 0 1 0-16a32 32 0 0 0 32-32v-8H40a16 16 0 0 1-16-16V72a16 16 0 0 1 16-16h60a16 16 0 0 1 16 16m100-16h-60a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h60v8a32 32 0 0 1-32 32a8 8 0 0 0 0 16a48.05 48.05 0 0 0 48-48V72a16 16 0 0 0-16-16"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-5.5-6 6 6-6 6"/></symbol>
 </svg>
 
